@@ -1,4 +1,16 @@
-# DevoxxBe2024
+# Devoxx Belgium 2024
+
+This project is a demo created for a talk at Devoxx Belgium 2024.
+It is a simple Angular application used to demonstrate the new feature that came with angular 17 and 18.
+You can find the slides of the talk [here](https://speakerdeck.com/magnette/unleashing-the-power-of-angular-navigating-the-latest-releases-and-transformations)
+
+The different commits illustrate the changes for the following subject:
+- initial project
+- switching to new control flow
+- adding defer view
+- signal
+- input/output/model
+- zoneless
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
 
