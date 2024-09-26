@@ -1,6 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Sheep} from "../models/sheep";
+import {Post} from "../models/post";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,10 @@ export class SheepService {
 
   getById(id:number){
     return this.http.get<Sheep>(`/assets/data/sheeps/${id}.json`);
+  }
+
+  getPosts(id:number){
+    return this.http.get<Post[]>(`/assets/data/posts/${id}.json`);
   }
 
 
