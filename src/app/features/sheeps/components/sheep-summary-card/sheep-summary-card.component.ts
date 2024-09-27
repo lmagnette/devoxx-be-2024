@@ -29,4 +29,8 @@ import {RouterLink} from "@angular/router";
 export class SheepSummaryCardComponent {
 
   @Input({required:true}) sheep!: Sheep;
+
+  like() {
+
+  }
 }

@@ -9,4 +9,5 @@ export interface Sheep {
     healthStatus?: string;   // Optional: current health condition of the sheep (e.g., "healthy", "sick")
     imageUrl: string;
     description?:string;
+    temperament: 'Calm' | 'Aggressive' | 'Playful';
 }
