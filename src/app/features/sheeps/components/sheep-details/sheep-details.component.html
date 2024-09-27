@@ -13,20 +13,15 @@
     </mat-card-header>
     <mat-card-content>
         <div class="temperament">
-            <mat-icon *ngIf="sheep.temperament === 'Calm'; else notCalm">
-                self_improvement
-            </mat-icon>
-            <ng-template #notCalm>
-                <mat-icon *ngIf="sheep.temperament === 'Aggressive';else other">
+            <mat-icon>
+                @if (sheep.temperament === 'Calm') {
+                    self_improvement
+                } @else if (sheep.temperament === 'Aggressive') {
                     local_fire_department
-                </mat-icon>
-            </ng-template>
-            <ng-template #other>
-                <mat-icon>
+                } @else {
                     gamepad
-                </mat-icon>
-            </ng-template>
-
+                }
+            </mat-icon>
             {{ sheep.temperament }}
         </div>
         <p><strong>Age:</strong> {{ sheep.age }} years</p>
