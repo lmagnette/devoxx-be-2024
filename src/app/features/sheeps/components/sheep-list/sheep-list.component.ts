@@ -35,18 +35,22 @@ export class SheepListComponent implements OnInit {
     // Using Angular signals to manage the sheep list reactively
     service = inject(SheepService);
     private _snackBar: MatSnackBar = inject(MatSnackBar);
-    sheepList = toSignal(this.service.list(), {initialValue:[]});
+    sheepList = toSignal(this.service.list(), {initialValue: []});
     searchValue = signal<string>('');
-    sheepFilteredList = computed(() => this.sheepList().filter( s => s.name.toUpperCase().includes(this.searchValue().toUpperCase())));
+    sheepFilteredList = computed(() => this.sheepList().filter(s => s.name.toUpperCase().includes(this.searchValue().toUpperCase())));
+    likeCount = signal<number>(0);
 
 
     ngOnInit(): void {
     }
 
-    likeChanged(likes:number){
-            if(likes > 0){
+    constructor() {
+        effect(() => {
+            const likes = this.likeCount();
+            if (likes > 0) {
                 this._snackBar.open(`like count is ${likes} likes`);
             }
 
+        })
     }
 }
