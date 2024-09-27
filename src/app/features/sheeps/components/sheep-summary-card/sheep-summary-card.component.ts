@@ -1,4 +1,4 @@
-import {Component, effect, inject, input, Input, model, output, signal} from '@angular/core';
+import {Component, input, model} from '@angular/core';
 import {MatCard, MatCardActions, MatCardFooter, MatCardImage, MatCardTitle} from "@angular/material/card";
 import {NgOptimizedImage} from "@angular/common";
 import {Sheep} from "../../models/sheep";
@@ -6,7 +6,6 @@ import {MatAnchor, MatButton, MatIconAnchor, MatIconButton} from "@angular/mater
 import {MatIcon} from "@angular/material/icon";
 import {RouterLink} from "@angular/router";
 import {MatBadge} from "@angular/material/badge";
-import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-sheep-summary-card',
